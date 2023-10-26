@@ -4,12 +4,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.Getter;
 import ua.edu.ucu.apps.lab.payment.PayPalPaymentStrategy;
 
 @RestController
 @RequestMapping("/api/payment")
 public class PaymentPayPalController {
-    public double price = 182.8;
+	@Getter
+    private final double price = 182.8;
 
     @GetMapping("/paypal")
     public double getPayment() {

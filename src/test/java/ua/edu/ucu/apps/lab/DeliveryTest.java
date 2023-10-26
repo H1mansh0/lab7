@@ -22,10 +22,10 @@ public class DeliveryTest {
 
     @BeforeEach
     public void init() {
-        int priceOne = 40;
-        int priceTwo = 35;
-        double sepalLengthOne = 0.8;
-        double sepalLengthTwo = 0.6;
+        final int priceOne = 40;
+        final int priceTwo = 35;
+        final double sepalLengthOne = 0.8;
+        final double sepalLengthTwo = 0.6;
 
         deliverDHL = new DHLDeliveryStrategy();
         deliverPost = new PostDeliveryStrategy();

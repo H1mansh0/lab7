@@ -11,8 +11,8 @@ public class PaymentTest {
 
     private CreditCartPaymentStrategy credit;
     private PayPalPaymentStrategy payPal;
-    private double price = 123.5;
-    private double checkingPrice = 123.5;
+    private final double price = 123.5;
+    private final double checkingPrice = 123.5;
 
 
 
