@@ -10,7 +10,7 @@ import ua.edu.ucu.apps.lab.payment.CreditCartPaymentStrategy;
 @RestController
 @RequestMapping("/api/payment")
 public class PaymentCardController {
-	@Getter
+    @Getter
     private final double price = 18.8;
 
     @GetMapping("/card")

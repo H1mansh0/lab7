@@ -14,9 +14,9 @@ import ua.edu.ucu.apps.lab.flowers.FlowerType;
 @RestController
 @RequestMapping("/api/flowers")
 public class FlowerController {
-	@Getter
+    @Getter
     private final int price = 45;
-	@Getter
+    @Getter
     private final double sepalLength = 0.8;
 
     @GetMapping("/list")
