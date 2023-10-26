@@ -9,9 +9,10 @@ import ua.edu.ucu.apps.lab.payment.PayPalPaymentStrategy;
 @RestController
 @RequestMapping("/api/payment")
 public class PaymentPayPalController {
+    public double price = 182.8;
+
     @GetMapping("/paypal")
-	public double getPayment() {
-		double price = 182.8;
-		return new PayPalPaymentStrategy().pay(price);
-	}
+    public double getPayment() {
+        return new PayPalPaymentStrategy().pay(price);
+    }
 }

@@ -15,12 +15,14 @@ import ua.edu.ucu.apps.lab.flowers.Item;
 @RestController
 @RequestMapping("/api/delivery")
 public class DeliveryDHLController {
+    public int price = 40;
+    public double sepalLength = 0.8;
     @GetMapping("/dhl")
-	public List<Item> getDelivery() {
-		int price = 40;
-		double sepalLength = 0.8;
-		return new DHLDeliveryStrategy().deliver(
-			List.of(new Flower(
-				FlowerType.ROSE, price, sepalLength, FlowerColor.RED)));
-	}
+    public List<Item> getDelivery() {
+        return new DHLDeliveryStrategy().deliver(
+            List.of(new Flower(
+               FlowerType.ROSE,
+               price, sepalLength,
+               FlowerColor.RED)));
+    }
 }

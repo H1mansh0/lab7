@@ -13,12 +13,16 @@ import ua.edu.ucu.apps.lab.flowers.FlowerType;
 @RestController
 @RequestMapping("/api/flowers")
 public class FlowerController {
+    public int price = 45;
+    public double sepalLength = 0.8;
+
     @GetMapping("/list")
-	public List<Flower> getFlowers() {
-		int price = 45;
-		double sepalLength = 0.8;
-		return List.of(
-			new Flower(
-				FlowerType.ROSE, price, sepalLength, FlowerColor.RED));
-	}
+    public List<Flower> getFlowers() {
+    return List.of(
+        new Flower(
+            FlowerType.ROSE,
+            price,
+            sepalLength,
+            FlowerColor.RED));
+    }
 }

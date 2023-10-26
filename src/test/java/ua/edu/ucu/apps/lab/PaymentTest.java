@@ -11,25 +11,24 @@ public class PaymentTest {
 
     private CreditCartPaymentStrategy credit;
     private PayPalPaymentStrategy payPal;
-    private double price;
+    private double price = 123.5;
+    private double checkingPrice = 123.5;
+
 
 
     @BeforeEach
     public void init() {
         credit = new CreditCartPaymentStrategy();
         payPal = new PayPalPaymentStrategy();
-        price = 123.5;
     }
 
     @Test
     public void testCredit() {
-        double checkingPrice = 123.5;
         Assertions.assertEquals(price, credit.pay(checkingPrice));
     }
 
     @Test
     public void testPayPal() { 
-        double checkingPrice = 123.5;
         Assertions.assertEquals(price, payPal.pay(checkingPrice));
     }
 }
